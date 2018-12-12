@@ -95,7 +95,22 @@ border-bottom-width: 0px;
 /* margin top & Bottom */
 .mt {
 	margin-top: 50px;
-	margin-bottom: 50px;
+  margin-bottom: 5px;
+}
+
+.basket{
+  position: fixed;
+  text-align: left;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  z-index: 1000;
+}
+
+.mt2 {
+	margin-top: 10px;
+	margin-bottom: 20px;
 }
 
 /* Special Margin for Wrap sections */
