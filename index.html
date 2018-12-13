@@ -1,44 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-      <meta charset="utf-8">
-      <title>EYRAUD-BOUCHARDON &CO</title>
-      <meta content="width=device-width, initial-scale=1.0" name="viewport">
-      <meta content="" name="keywords">
-      <meta content="" name="description">
-    
-      <!-- Favicons -->
-      <link href="img/favicon.png" rel="icon">
-      <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
-    
-      <!-- Google Fonts -->
-      <link href="https://fonts.googleapis.com/css?family=Ruda:400,900,700" rel="stylesheet">
-    
-      <!-- Bootstrap CSS File -->
-      <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    
-      <!-- Libraries CSS Files -->
-      <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-      <link href="lib/animations/animations.css" rel="stylesheet">
-      <link href="lib/hover-pack/hover-pack.css" rel="stylesheet">
-    
-      <!-- Main Stylesheet File -->
-      <link href="css/style.css" rel="stylesheet">
-      <link href="css/colors/color-74c9be.css" rel="stylesheet">
-    
-      <!-- =======================================================
-        Template Name: Marco
-        Template URL: https://templatemag.com/marco-bootstrap-agency-template/
-        Author: TemplateMag.com
-        License: https://templatemag.com/license/
-      ======================================================= -->
-
-
-    <script defer src="app.js"></script>
+    <meta charset="utf-8">
+    <title>EYRAUD-BOUCHARDON &CO</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
   
-</head>
+    <!-- Favicons -->
+    <link href="img/favicon.png" rel="icon">
+    <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
+  
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Ruda:400,900,700" rel="stylesheet">
+  
+    <!-- Bootstrap CSS File -->
+    <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  
+    <!-- Libraries CSS Files -->
+    <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="lib/animations/animations.css" rel="stylesheet">
+    <link href="lib/hover-pack/hover-pack.css" rel="stylesheet">
+  
+    <!-- Main Stylesheet File -->
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/colors/color-74c9be.css" rel="stylesheet">
+  
+    <!-- =======================================================
+      Template Name: Marco
+      Template URL: https://templatemag.com/marco-bootstrap-agency-template/
+      Author: TemplateMag.com
+      License: https://templatemag.com/license/
+    ======================================================= -->
 
-<body>
+    <!-- Firebase App is always required and must be first -->
+    <script src="https://www.gstatic.com/firebasejs/5.7.0/firebase-app.js"></script>
+
+    <!-- Add additional services that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/5.7.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.7.0/firebase-database.js"></script>
+    
+
+    <script src="https://www.gstatic.com/firebasejs/5.7.0/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyDXUMBNPBoIOTdcRTBdjjS5ttYW3zb_i7U",
+        authDomain: "ae-bb-securite.firebaseapp.com",
+        databaseURL: "https://ae-bb-securite.firebaseio.com",
+        projectId: "ae-bb-securite",
+        storageBucket: "ae-bb-securite.appspot.com",
+        messagingSenderId: "1055477094114"
+      };
+      firebase.initializeApp(config);
+    </script>
+  
+  </head>
+
+  <body>
 
 
     <!-- ##### Header #####  -->
@@ -401,8 +420,11 @@
   
     <!-- Template Main Javascript File -->
     <script src="js/main.js"></script>
+
+    <!-- Database Functions -->
+    <script src="js/scriptDatabase.js"></script>
   
   </body>
-  </html>
+</html>
   
 
