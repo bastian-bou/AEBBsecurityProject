@@ -1,175 +1,215 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>EYRAUD-BOUCHARDON &CO</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="" name="keywords">
-    <meta content="" name="description">
-  
-    <!-- Favicons -->
-    <link href="img/favicon.png" rel="icon">
-    <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
-  
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Ruda:400,900,700" rel="stylesheet">
-  
-    <!-- Bootstrap CSS File -->
-    <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  
-    <!-- Libraries CSS Files -->
-    <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-    <link href="lib/animations/animations.css" rel="stylesheet">
-    <link href="lib/hover-pack/hover-pack.css" rel="stylesheet">
-      <!-- Bootstrap CSS File -->
-      <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  
-      <!-- Libraries CSS Files -->
-      <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-      <link href="lib/animations/animations.css" rel="stylesheet">
-      <link href="lib/hover-pack/hover-pack.css" rel="stylesheet">
-    
-      <!-- Main Stylesheet File -->
-      <link href="css/style.css" rel="stylesheet">
-      <link href="css/colors/color-74c9be.css" rel="stylesheet">
-    <!-- Main Stylesheet File -->
-    <link href="css/style.css" rel="stylesheet">
-    <link href="css/colors/color-74c9be.css" rel="stylesheet">
-  
-    <!-- =======================================================
+
+<head>
+  <meta charset="utf-8">
+  <title>EYRAUD-BOUCHARDON &CO</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+
+  <!-- Favicons -->
+  <link href="img/favicon.png" rel="icon">
+  <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Ruda:400,900,700" rel="stylesheet">
+
+  <!-- Libraries CSS Files -->
+  <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="lib/animations/animations.css" rel="stylesheet">
+  <link href="lib/hover-pack/hover-pack.css" rel="stylesheet">
+
+  <!-- Libraries CSS Files -->
+  <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="lib/animations/animations.css" rel="stylesheet">
+  <link href="lib/hover-pack/hover-pack.css" rel="stylesheet">
+
+  <!-- Main Stylesheet File -->
+  <link href="css/style.css" rel="stylesheet">
+  <link href="css/colors/color-74c9be.css" rel="stylesheet">
+
+  <!-- Main Stylesheet File -->
+  <link href="css/style.css" rel="stylesheet">
+  <link href="css/colors/color-74c9be.css" rel="stylesheet">
+
+  <!-- Modal -->
+  <link href="css/Modal.css" rel="stylesheet">
+  <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css'>
+
+  <!-- =======================================================
       Template Name: Marco
       Template URL: https://templatemag.com/marco-bootstrap-agency-template/
       Author: TemplateMag.com
       License: https://templatemag.com/license/
-    ======================================================= -->
+    ========================================================== -->
 
-    <!-- Firebase App is always required and must be first -->
-    <script src="https://www.gstatic.com/firebasejs/5.7.0/firebase-app.js"></script>
+  <!-- Firebase App is always required and must be first -->
+  <script src="https://www.gstatic.com/firebasejs/5.7.0/firebase-app.js"></script>
 
-    <!-- Add additional services that you want to use -->
-    <script src="https://www.gstatic.com/firebasejs/5.7.0/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/5.7.0/firebase-database.js"></script>
-    
-
-    <script src="https://www.gstatic.com/firebasejs/5.7.0/firebase.js"></script>
-    <script>
-      // Initialize Firebase
-      var config = {
-        apiKey: "AIzaSyDXUMBNPBoIOTdcRTBdjjS5ttYW3zb_i7U",
-        authDomain: "ae-bb-securite.firebaseapp.com",
-        databaseURL: "https://ae-bb-securite.firebaseio.com",
-        projectId: "ae-bb-securite",
-        storageBucket: "ae-bb-securite.appspot.com",
-        messagingSenderId: "1055477094114"
-      };
-      firebase.initializeApp(config);
-    </script>
-  
-  </head>
-
-  <body>
+  <!-- Add additional services that you want to use -->
+  <script src="https://www.gstatic.com/firebasejs/5.7.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.7.0/firebase-database.js"></script>
 
 
-    <!-- ##### Header #####  -->
-    <div><a class="basket" href="paiement.html"><img src="img/portfolio/cart.svg" alt="Basket" width="10%" height="10%"/></a></div>
-    
-    <div id="headerwrap">
-      <div class="container">
-        <div class="row centered">
-          <div class="col-lg-8 col-lg-offset-2 mt">
-            <h1 class="animation slideDown">EYRAUD-BOUCHARDON &CO</h1>
-            <p class="mt"><button type="button" class="btn btn-cta btn-lg">SIGN IN</button></p>
-            <p class="mt2"><button type="button" class="btn btn-cta btn-lg">LOG IN </button></p>
-          </div>
-        </div>
-        <!-- /row -->
+  <script src="https://www.gstatic.com/firebasejs/5.7.0/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyDXUMBNPBoIOTdcRTBdjjS5ttYW3zb_i7U",
+      authDomain: "ae-bb-securite.firebaseapp.com",
+      databaseURL: "https://ae-bb-securite.firebaseio.com",
+      projectId: "ae-bb-securite",
+      storageBucket: "ae-bb-securite.appspot.com",
+      messagingSenderId: "1055477094114"
+    };
+    firebase.initializeApp(config);
+  </script>
+
+</head>
+
+  <!-- Modal sign in-->
+  <div class="modal fade" id="sign-in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"style="display: none;">
+    <div style="z-index: 20000000;" class="modal-dialog">
+      <div class="loginmodal-container">
+        <h1>Sign in to buy some stuff</h1><br>
+        <form>
+          <input type="text" name="user" placeholder="Username">
+          <input type="text" name="user" placeholder="Mail address">
+          <input type="password" name="pass" placeholder="Password"> 
+          <input type="text" name="pass" placeholder="Address"> 
+          <input type="text" name="pass" placeholder="Zip code"> 
+          <input type="text" name="pass" placeholder="City"> 
+          <input type="text" name="pass" placeholder="Country"> 
+          <input type="submit" name="login" class="login loginmodal-submit" value="Finish">
+        </form>
       </div>
-      <!-- /container -->
     </div>
-    <!-- /headerwrap -->
-  
-    <!-- ##### Description #####  -->
-    <div id="black">
-      <div class="container">
-        <div class="row mt centered">
-          <div class="col-lg-4 col-lg-offset-4">
-            <h3>Our Story</h3>
-            <hr>
-          </div>
-          <!-- /col-lg-4 -->
+  </div>
+  <!-- Modal login -->
+  <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"style="display: none;">
+    <div style="z-index: 20000000;" class="modal-dialog">
+      <div class="loginmodal-container">
+        <h1>Login to Your Account</h1><br>
+        <form>
+          <input type="text" name="user" placeholder="Username">
+          <input type="password" name="pass" placeholder="Password">
+          <input type="submit" name="login" class="login loginmodal-submit" value="Login">
+        </form>
+
+        <div class="login-help">
+          <a id="register-link" href="#" data-toggle="modal" data-target="#sign-in" onclick="closeSignIn()">Register</a> - <a href="#">Forgot Password</a>
         </div>
-        <!-- /row -->
-  
-        <div class="row mt">
-          <div class="col-lg-8 col-lg-offset-2">
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-          </div>
-        </div>
-        <!-- /row -->
       </div>
-      <!-- /container -->
     </div>
-    <!-- /black -->
-  
-    <!-- ##### Vinyl #####  -->
+  </div>
+  <!-- -->
+
+<body>
+
+  <!-- ##### Header #####  -->
+  <div><a class="basket" href="paiement.html"><img src="img/portfolio/cart.svg" alt="Basket" width="10%" height="10%" /></a></div>
+
+  <div id="headerwrap">
     <div class="container">
-  
-      <div class="row mt centered ">
-        <div class="col-lg-4 col-lg-offset-4">
-          <h3>VINYL PRODUCT</h3>
-          <hr>
+      <div class="row centered">
+        <div class="col-lg-8 col-lg-offset-2 mt">
+          <h1 class="animation slideDown">EYRAUD-BOUCHARDON &CO</h1>
+          <p class="mt"><button type="button" class="btn btn-cta btn-lg" data-toggle="modal" data-target="#sign-in">SIGN IN</button></p>
+          <p class="mt2"><button type="button" class="btn btn-cta btn-lg" data-toggle="modal" data-target="#login-modal">LOG IN </button></p>
         </div>
       </div>
       <!-- /row -->
-  
+    </div>
+    <!-- /container -->
+  </div>
+  <!-- /headerwrap -->
+
+  <!-- ##### Description #####  -->
+  <div id="black">
+    <div class="container">
+      <div class="row mt centered">
+        <div class="col-lg-4 col-lg-offset-4">
+          <h3>Our Story</h3>
+          <hr>
+        </div>
+        <!-- /col-lg-4 -->
+      </div>
+      <!-- /row -->
+
       <div class="row mt">
-        <div class="col-lg-4 col-md-4 col-xs-12 desc">
-          <a class="b-link-fade b-animate-go" href="#"><img width="350" src="img/portfolio/port04.jpg" alt="" />
-            <div class="b-wrapper">
-                <h4 class="b-from-left b-animate b-delay03">Post 1</h4>
-                <p class="b-from-right b-animate b-delay03">Read More.</p>
-            </div>
-          </a>
-          <p>The Sky Is The Limit</p>
-          <p class="lead">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-          <!-- Start Button [1] -->
-          <div class="button-hover">
-            <a class="link" href="#">185 $</a>
-            <a href="#">Add to basket</a>
-          </div>
-          <!-- End Button [1] -->
+        <div class="col-lg-8 col-lg-offset-2">
+          <p>We are both lovers of analog music and we open this web site to sell our collection of limited vinyl. And our best products in record player last 
+            generation. Enjoy your visit and don't hesitate to contact us if you have any questions.</p><br>
+          <p style="text-align: center">Axel & Bastian</p>
         </div>
-        <!-- col-lg-4 -->
-  
-        <div class="col-lg-4 col-md-4 col-xs-12 desc">
-          <a class="b-link-fade b-animate-go" href="#"><img width="350" src="img/portfolio/port05.jpg" alt="" />
-            <div class="b-wrapper">
-                <h4 class="b-from-left b-animate b-delay03">Post 2</h4>
-                <p class="b-from-right b-animate b-delay03">Read More.</p>
-            </div>
-          </a>
-          <p>Another Cool Stuff</p>
-          <p class="lead">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-          <!-- Start Button [1] -->
-          <div class="button-hover">
-            <a class="link" href="#">235 $</a>
-            <a href="#">Add to basket</a>
+      </div>
+      <!-- /row -->
+    </div>
+    <!-- /container -->
+  </div>
+  <!-- /black -->
+
+  <!-- ##### Vinyl #####  -->
+  <div class="container">
+
+    <div class="row mt centered ">
+      <div class="col-lg-4 col-lg-offset-4">
+        <h3>VINYL PRODUCT</h3>
+        <hr>
+      </div>
+    </div>
+    <!-- /row -->
+
+    <div class="row mt">
+      <div class="col-lg-4 col-md-4 col-xs-12 desc">
+        <a class="b-link-fade b-animate-go" href="#"><img width="350" src="img/portfolio/port04.jpg" alt="" />
+          <div class="b-wrapper">
+            <h4 class="b-from-left b-animate b-delay03">In</h4>
+            <p class="b-from-right b-animate b-delay03">1986</p>
           </div>
-          <!-- End Button [1] -->
+        </a>
+        <p>RadioHead best of</p>
+        <p class="lead">Best songs of the famous group : RadioHead. A compilation of 25 titles.</p>
+        <!-- Start Button [1] -->
+        <div class="button-hover">
+          <a class="link" href="#">185 $</a>
+          <a href="#">Add to basket</a>
         </div>
-        <!-- col-lg-4 -->
-        <!DOCTYPE html>
-        <html lang="en">
-          <head>
+        <!-- End Button [1] -->
+      </div>
+      <!-- col-lg-4 -->
+
+      <div class="col-lg-4 col-md-4 col-xs-12 desc">
+        <a class="b-link-fade b-animate-go" href="#"><img width="350" src="img/portfolio/port05.jpg" alt="" />
+          <div class="b-wrapper">
+            <h4 class="b-from-left b-animate b-delay03">In</h4>
+            <p class="b-from-right b-animate b-delay03">1975</p>
+          </div>
+        </a>
+        <p>Black heart in black suit</p>
+        <p class="lead">A group unknow, but with a great potential in the future. Listen those 13 titles.</p>
+        <!-- Start Button [1] -->
+        <div class="button-hover">
+          <a class="link" href="#">35 $</a>
+          <a href="#">Add to basket</a>
+        </div>
+        <!-- End Button [1] -->
+      </div>
+      <!-- col-lg-4 -->
+      <!DOCTYPE html>
+      <html lang="en">
+
+      <head>
         <div class="col-lg-4 col-md-4 col-xs-12 desc">
           <a class="b-link-fade b-animate-go" href="#"><img width="350" src="img/portfolio/port06.jpg" alt="" />
             <div class="b-wrapper">
-                <h4 class="b-from-left b-animate b-delay03">Post 3</h4>
-                <p class="b-from-right b-animate b-delay03">Read More.</p>
+              <h4 class="b-from-left b-animate b-delay03">In</h4>
+              <p class="b-from-right b-animate b-delay03">1986</p>
             </div>
           </a>
-          <p>This Is Awesome</p>
-          <p class="lead">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+          <p>The Beattles</p>
+          <p class="lead">The greatest english group in the world propose you to listen those 16 titles.</p>
           <!-- Start Button [1] -->
           <div class="button-hover">
             <a class="link" href="#">630 $</a>
@@ -178,34 +218,34 @@
           <!-- End Button [1] -->
         </div>
         <!-- col-lg-4 -->
-  
+
         <div class="col-lg-4 col-md-4 col-xs-12 desc">
           <a class="b-link-fade b-animate-go" href="#"><img width="350" src="img/portfolio/port07.jpg" alt="" />
             <div class="b-wrapper">
-                <h4 class="b-from-left b-animate b-delay03">Post 3</h4>
-                <p class="b-from-right b-animate b-delay03">Read More.</p>
+              <h4 class="b-from-left b-animate b-delay03">In </h4>
+              <p class="b-from-right b-animate b-delay03">2000</p>
             </div>
           </a>
-          <p>This Is Awesome</p>
-          <p class="lead">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+          <p>The Doors</p>
+          <p class="lead">This famous American group diplay to you this 15 titles from Los Angeles.</p>
           <!-- Start Button [1] -->
           <div class="button-hover">
-            <a class="link" href="#">58 $</a>
+            <a class="link" href="#">158 $</a>
             <a href="#">Add to basket</a>
           </div>
           <!-- End Button [1] -->
         </div>
         <!-- col-lg-4 -->
-  
+
         <div class="col-lg-4 col-md-4 col-xs-12 desc">
           <a class="b-link-fade b-animate-go" href="#"><img width="350" src="img/portfolio/port08.jpg" alt="" />
             <div class="b-wrapper">
-                <h4 class="b-from-left b-animate b-delay03">Post 3</h4>
-                <p class="b-from-right b-animate b-delay03">Read More.</p>
+              <h4 class="b-from-left b-animate b-delay03">In</h4>
+              <p class="b-from-right b-animate b-delay03">2002</p>
             </div>
           </a>
-          <p>This Is Awesome</p>
-          <p class="lead">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+          <p>The rolling stones</p>
+          <p class="lead">An other well-know group that offer to you those 20 titles of hapiness.</p>
           <!-- Start Button [1] -->
           <div class="button-hover">
             <a class="link" href="#">58 $</a>
@@ -214,233 +254,247 @@
           <!-- End Button [1] -->
         </div>
         <!-- col-lg-4 -->
-  
+
         <div class="col-lg-4 col-md-4 col-xs-12 desc">
           <a class="b-link-fade b-animate-go" href="#"><img width="350" src="img/portfolio/port09.jpg" alt="" />
             <div class="b-wrapper">
-                <h4 class="b-from-left b-animate b-delay03">Post 3</h4>
-                <p class="b-from-right b-animate b-delay03">Read More.</p>
+              <h4 class="b-from-left b-animate b-delay03">Post 3</h4>
+              <p class="b-from-right b-animate b-delay03">Read More.</p>
             </div>
           </a>
-          <p>This Is Awesome</p>
-          <p class="lead">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+          <p>Sleep</p>
+          <p class="lead">This is the perfect compilation to fall asleep after a hard working day.</p>
           <!-- Start Button [1] -->
           <div class="button-hover">
-            <a class="link" href="#">58 $</a>
+            <a class="link" href="#">258 $</a>
             <a href="#">Add to basket</a>
           </div>
           <!-- End Button [1] -->
         </div>
         <!-- col-lg-4 -->
-  
+
+    </div>
+    <!-- /row -->
+  </div>
+  <!-- /container -->
+
+  <!-- ##### Platines #####  -->
+  <div id="cta01">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2">
+          <h2>The probability of success is difficult to estimate;<br />but if we never search, the chance of success
+            is zero.</h2>
+          <button type="button" class="btn btn-cta btn-lg">LEARN MORE</button>
+        </div>
       </div>
       <!-- /row -->
     </div>
     <!-- /container -->
-  
-    <!-- ##### Platines #####  -->
-    <div id="cta01">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-8 col-lg-offset-2">
-            <h2>The probability of success is difficult to estimate;<br/>but if we never search, the chance of success is zero.</h2>
-            <button type="button" class="btn btn-cta btn-lg">LEARN MORE</button>
-          </div>
-        </div>
-        <!-- /row -->
+  </div>
+
+  <div class="container">
+    <div class="row mt centered ">
+      <div class="col-lg-4 col-lg-offset-4">
+        <h3>VINYL PLAYER</h3>
+        <hr>
       </div>
-      <!-- /container -->
     </div>
-  
+    <!-- /row -->
+    <div class="row mt centered">
+      <div class="col-lg-4 col-md-4 col-xs-12 desc">
+        <a class="b-link-fade b-animate-go" href="#"><img width="350" src="img/portfolio/port01.jpg" alt="" />
+          <div class="b-wrapper">
+            <h4 class="b-from-left b-animate b-delay03">Post 2</h4>
+            <p class="b-from-right b-animate b-delay03">Read More.</p>
+          </div>
+        </a>
+        <p>PRT 200rs</p>
+        <p class="lead">Perfect for bigginer in listening analog</p>
+        <!-- Start Button [1] -->
+        <div class="button-hover">
+            <a class="link" href="#">1235 $</a>
+            <a href="#">Add to basket</a>
+        </div>
+        <!-- End Button [1] -->
+      </div>
+      <!-- col-lg-4 -->
+      <div class="col-lg-4 col-md-4 col-xs-12 desc">
+        <a class="b-link-fade b-animate-go" href="#"><img width="350" src="img/portfolio/port02.jpg" alt="" />
+          <div class="b-wrapper">
+            <h4 class="b-from-left b-animate b-delay03">Post 2</h4>
+            <p class="b-from-right b-animate b-delay03">Read More.</p>
+          </div>
+        </a>
+        <p>SDF 563tr</p>
+        <p class="lead">Medium class record player. Perfect for a low budget.</p>
+        <!-- Start Button [1] -->
+        <div class="button-hover">
+          <a class="link" href="#">235 $</a>
+          <a href="#">Add to basket</a>
+        </div>
+        <!-- End Button [1] -->
+      </div>
+      <!-- col-lg-4 -->
+      <div class="col-lg-4 col-md-4 col-xs-12 desc">
+        <a class="b-link-fade b-animate-go" href="#"><img width="350" src="img/portfolio/port03.jpg" alt="" />
+          <div class="b-wrapper">
+            <h4 class="b-from-left b-animate b-delay03">Post 2</h4>
+            <p class="b-from-right b-animate b-delay03">Read More.</p>
+          </div>
+        </a>
+        <p>Another Cool Stuff</p>
+        <p class="lead">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
+          printer took a galley of type and scrambled it to make a type specimen book.</p>
+        <!-- Start Button [1] -->
+        <div class="button-hover">
+          <a class="link" href="#">235 $</a>
+          <a href="#">Add to basket</a>
+        </div>
+        <!-- End Button [1] -->
+      </div>
+      <!-- col-lg-4 -->
+      <div class="col-lg-4 col-md-4 col-xs-12 desc">
+        <a class="b-link-fade b-animate-go" href="#"><img width="350" src="img/portfolio/port10.jpg" alt="" />
+          <div class="b-wrapper">
+            <h4 class="b-from-left b-animate b-delay03">Post 2</h4>
+            <p class="b-from-right b-animate b-delay03">Read More.</p>
+          </div>
+        </a>
+        <p>Another Cool Stuff</p>
+        <p class="lead">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
+          printer took a galley of type and scrambled it to make a type specimen book.</p>
+        <!-- Start Button [1] -->
+        <div class="button-hover">
+          <a class="link" href="#">235 $</a>
+          <a href="#">Add to basket</a>
+        </div>
+        <!-- End Button [1] -->
+      </div>
+      <!-- col-lg-4 -->
+      <div class="col-lg-4 col-md-4 col-xs-12 desc">
+        <a class="b-link-fade b-animate-go" href="#"><img width="350" src="img/portfolio/port11.jpg" alt="" />
+          <div class="b-wrapper">
+            <h4 class="b-from-left b-animate b-delay03">Post 2</h4>
+            <p class="b-from-right b-animate b-delay03">Read More.</p>
+          </div>
+        </a>
+        <p>Another Cool Stuff</p>
+        <p class="lead">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
+          printer took a galley of type and scrambled it to make a type specimen book.</p>
+        <!-- Start Button [1] -->
+        <div class="button-hover">
+          <a class="link" href="#">235 $</a>
+          <a href="#">Add to basket</a>
+        </div>
+        <!-- End Button [1] -->
+      </div>
+      <!-- col-lg-4 -->
+      <div class="col-lg-4 col-md-4 col-xs-12 desc">
+        <a class="b-link-fade b-animate-go" href="#"><img width="350" src="img/portfolio/port12.jpg" alt="" />
+          <div class="b-wrapper">
+            <h4 class="b-from-left b-animate b-delay03">Post 2</h4>
+            <p class="b-from-right b-animate b-delay03">Read More.</p>
+          </div>
+        </a>
+        <p>Another Cool Stuff</p>
+        <p class="lead">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
+          printer took a galley of type and scrambled it to make a type specimen book.</p>
+        <!-- Start Button [1] -->
+        <div class="button-hover">
+          <a class="link" href="#">235 $</a>
+          <a href="#">Add to basket</a>
+        </div>
+        <!-- End Button [1] -->
+      </div>
+      <!-- col-lg-4 -->
+    </div>
+  </div>
+  <!-- /container -->
+
+  <!-- ###### Commentaire #####-->
+  <div id="white">
     <div class="container">
-      <div class="row mt centered ">
-        <div class="col-lg-4 col-lg-offset-4">
-          <h3>VINYL PLAYER</h3>
+      <div class="row mt">
+        <div class="col-lg-4 col-lg-offset-4 centered">
+          <h3>Contact Us</h3>
           <hr>
         </div>
       </div>
-      <!-- /row -->
-      <div class="row mt centered">
-        <div class="col-lg-4 col-md-4 col-xs-12 desc">
-          <a class="b-link-fade b-animate-go" href="#"><img width="350" src="img/portfolio/port01.jpg" alt="" />
-            <div class="b-wrapper">
-                <h4 class="b-from-left b-animate b-delay03">Post 2</h4>
-                <p class="b-from-right b-animate b-delay03">Read More.</p>
-            </div>
-          </a>
-          <p>Another Cool Stuff</p>
-          <p class="lead">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-          <!-- Start Button [1] -->
-          <div class="<!DOCTYPE html>
-              <html lang="en">
-                <head>button-hover">
-            <a class="link" href="#">235 $</a>
-            <a href="#">Add to basket</a>
-          </div>
-          <!-- End Button [1] -->
-        </div>
-        <!-- col-lg-4 -->
-        <div class="col-lg-4 col-md-4 col-xs-12 desc">
-          <a class="b-link-fade b-animate-go" href="#"><img width="350" src="img/portfolio/port02.jpg" alt="" />
-            <div class="b-wrapper">
-                <h4 class="b-from-left b-animate b-delay03">Post 2</h4>
-                <p class="b-from-right b-animate b-delay03">Read More.</p>
-            </div>
-          </a>
-          <p>Another Cool Stuff</p>
-          <p class="lead">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-          <!-- Start Button [1] -->
-          <div class="button-hover">
-            <a class="link" href="#">235 $</a>
-            <a href="#">Add to basket</a>
-          </div>
-          <!-- End Button [1] -->
-        </div>
-        <!-- col-lg-4 -->
-        <div class="col-lg-4 col-md-4 col-xs-12 desc">
-          <a class="b-link-fade b-animate-go" href="#"><img width="350" src="img/portfolio/port03.jpg" alt="" />
-            <div class="b-wrapper">
-                <h4 class="b-from-left b-animate b-delay03">Post 2</h4>
-                <p class="b-from-right b-animate b-delay03">Read More.</p>
-            </div>
-          </a>
-          <p>Another Cool Stuff</p>
-          <p class="lead">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-          <!-- Start Button [1] -->
-          <div class="button-hover">
-            <a class="link" href="#">235 $</a>
-            <a href="#">Add to basket</a>
-          </div>
-          <!-- End Button [1] -->
-        </div>
-        <!-- col-lg-4 -->
-        <div class="col-lg-4 col-md-4 col-xs-12 desc">
-          <a class="b-link-fade b-animate-go" href="#"><img width="350" src="img/portfolio/port10.jpg" alt="" />
-            <div class="b-wrapper">
-                <h4 class="b-from-left b-animate b-delay03">Post 2</h4>
-                <p class="b-from-right b-animate b-delay03">Read More.</p>
-            </div>
-          </a>
-          <p>Another Cool Stuff</p>
-          <p class="lead">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-          <!-- Start Button [1] -->
-          <div class="button-hover">
-            <a class="link" href="#">235 $</a>
-            <a href="#">Add to basket</a>
-          </div>
-          <!-- End Button [1] -->
-        </div>
-        <!-- col-lg-4 -->
-        <div class="col-lg-4 col-md-4 col-xs-12 desc">
-          <a class="b-link-fade b-animate-go" href="#"><img width="350" src="img/portfolio/port11.jpg" alt="" />
-            <div class="b-wrapper">
-                <h4 class="b-from-left b-animate b-delay03">Post 2</h4>
-                <p class="b-from-right b-animate b-delay03">Read More.</p>
-            </div>
-          </a>
-          <p>Another Cool Stuff</p>
-          <p class="lead">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-          <!-- Start Button [1] -->
-          <div class="button-hover">
-            <a class="link" href="#">235 $</a>
-            <a href="#">Add to basket</a>
-          </div>
-          <!-- End Button [1] -->
-        </div>
-        <!-- col-lg-4 -->
-        <div class="col-lg-4 col-md-4 col-xs-12 desc">
-          <a class="b-link-fade b-animate-go" href="#"><img width="350" src="img/portfolio/port12.jpg" alt="" />
-            <div class="b-wrapper">
-                <h4 class="b-from-left b-animate b-delay03">Post 2</h4>
-                <p class="b-from-right b-animate b-delay03">Read More.</p>
-            </div>
-          </a>
-          <p>Another Cool Stuff</p>
-          <p class="lead">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-          <!-- Start Button [1] -->
-          <div class="button-hover">
-            <a class="link" href="#">235 $</a>
-            <a href="#">Add to basket</a>
-          </div>
-          <!-- End Button [1] -->
-        </div>
-        <!-- col-lg-4 -->
-      </div>
-    </div>
-    <!-- /container -->
-  
-    <!-- ###### Commentaire #####-->
-    <div id="white">
-      <div class="container">
-        <div class="row mt">
-          <div class="col-lg-4 col-lg-offset-4 centered">
-            <h3>Contact Us</h3>
-            <hr>
-          </div>
-        </div>
-        <div class="row">
-          <div class="<!DOCTYPE html>
-              <html lang="en">
-                <head>col-md-8 col-md-offset-2">
-  
-            <form class="contact-form php-mail-form" role="form" action="contactform/contactform.php" method="POST">
-  
-              <div class="form-group">
-                <input type="name" name="name" class="form-control" id="contact-name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" >
-                <div class="validate"></div>
-              </div>
-              <div class="form-group">
-                <input type="email" name="email" class="form-control" id="contact-email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email">
-                <div class="validate"></div>
-              </div>
-              <div class="form-group">
-                <input type="text" name="subject" class="form-control" id="contact-subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject">
-                <div class="validate"></div>
-              </div>
-  
-              <div class="form-group">
-                <textarea class="form-control" name="message" id="contact-message" placeholder="Your Message" rows="5" data-rule="required" data-msg="Please write something for us"></textarea>
-                <div class="validate"></div>
-              </div>
-  
-              <div class="loading"></div>
-              <div class="error-message"></div>
-              <div class="sent-message">Your message has been sent. Thank you!</div>
-  
-              <div class="form-send">
-                <button type="submit" class="btn btn-large">Send Message</button>
-              </div>
-  
-            </form>
-  
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- /white -->
-  
-    <div id="copyrights">
-      <div class="container">
-        <p>
-          &copy; Copyrights <strong>VINYL-STORE</strong>. All Rights Reserved
-        </p>
-      </div>
-    </div>
-    <!-- / copyrights -->
-  
-    <!-- JavaScript Libraries -->
-    <script src="lib/jquery/jquery.min.js"></script>
-    <script src="lib/bootstrap/js/bootstrap.min.js"></script>
-    <script src="lib/php-mail-form/validate.js"></script>
-    <script src="lib/hover-pack/hover-pack.js"></script>
-  
-    <!-- Template Main Javascript File -->
-    <script src="js/main.js"></script>
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2">
 
-    <!-- Database Functions -->
-    <script src="js/scriptDatabase.js"></script>
-  
-  </body>
+          <form class="contact-form php-mail-form" role="form" action="contactform/contactform.php" method="POST">
+
+            <div class="form-group">
+              <input type="name" name="name" class="form-control" id="contact-name" placeholder="Your Name" data-rule="minlen:4"
+                data-msg="Please enter at least 4 chars">
+              <div class="validate"></div>
+            </div>
+            <div class="form-group">
+              <input type="email" name="email" class="form-control" id="contact-email" placeholder="Your Email"
+                data-rule="email" data-msg="Please enter a valid email">
+              <div class="validate"></div>
+            </div>
+            <div class="form-group">
+              <input type="text" name="subject" class="form-control" id="contact-subject" placeholder="Subject"
+                data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject">
+              <div class="validate"></div>
+            </div>
+
+            <div class="form-group">
+              <textarea class="form-control" name="message" id="contact-message" placeholder="Your Message" rows="5"
+                data-rule="required" data-msg="Please write something for us"></textarea>
+              <div class="validate"></div>
+            </div>
+
+            <div class="loading"></div>
+            <div class="error-message"></div>
+            <div class="sent-message">Your message has been sent. Thank you!</div>
+
+            <div class="form-send">
+              <button type="submit" class="btn btn-large">Send Message</button>
+            </div>
+
+          </form>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- /white -->
+
+  <div id="copyrights">
+    <div class="container">
+      <p>
+        &copy; Copyrights <strong>VINYL-STORE</strong>. All Rights Reserved
+      </p>
+    </div>
+  </div>
+  <!-- / copyrights -->
+
+  <!-- JavaScript Libraries -->
+  <script src="lib/jquery/jquery.min.js"></script>
+  <!-- <script src="lib/php-mail-form/validate.js"></script>
+  <script src="lib/hover-pack/hover-pack.js"></script> -->
+
+  <!-- Template Main Javascript File -->
+  <script src="js/main.js"></script>
+
+  <!-- Database Functions -->
+  <script src="js/scriptDatabase.js"></script>
+
+  <!-- Modal -->
+  <script src='https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js'></script>
+  <script src='https://netdna.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js'></script>
+
+  <script>
+    function closeSignIn() {
+      $("#login-modal").modal("hide");
+      console.log('hello');
+    };
+  </script>
+
+</body>
+
 </html>
-  
-
