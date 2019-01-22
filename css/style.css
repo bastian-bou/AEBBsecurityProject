@@ -854,7 +854,7 @@ p.capitalize:first-letter {
 }
 
 .ArticleArticle{
-  background-color: Gainsboro;
+  background-color: white;
 	border-radius: 0rem;
 	border-width: 0px;
 	border-bottom: 3px solid CornflowerBlue;
@@ -862,7 +862,7 @@ p.capitalize:first-letter {
 }
 
 .ArticleTitre{
-  background-color: Gainsboro;
+  background-color: white;
 	border-radius: 0rem;
 	border-width: 0px;
 	border-bottom: 6px solid rgb(202, 82, 82);

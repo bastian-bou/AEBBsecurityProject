@@ -20,15 +20,6 @@
   <link href="lib/animations/animations.css" rel="stylesheet">
   <link href="lib/hover-pack/hover-pack.css" rel="stylesheet">
 
-  <!-- Libraries CSS Files -->
-  <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-  <link href="lib/animations/animations.css" rel="stylesheet">
-  <link href="lib/hover-pack/hover-pack.css" rel="stylesheet">
-
-  <!-- Main Stylesheet File -->
-  <link href="css/style.css" rel="stylesheet">
-  <link href="css/colors/color-74c9be.css" rel="stylesheet">
-
   <!-- Main Stylesheet File -->
   <link href="css/style.css" rel="stylesheet">
   <link href="css/colors/color-74c9be.css" rel="stylesheet">
@@ -52,10 +43,10 @@
   <script src="https://www.gstatic.com/firebasejs/5.7.0/firebase-database.js"></script>
 
 
+  <!-- FireBase -->
   <script src="https://www.gstatic.com/firebasejs/5.7.0/firebase.js"></script>
   <script>
-
-    // Initialize Firebase
+    // #### Initialize Firebase #### \\
     var config = {
       apiKey: "AIzaSyDXUMBNPBoIOTdcRTBdjjS5ttYW3zb_i7U",
       authDomain: "ae-bb-securite.firebaseapp.com",
@@ -64,7 +55,6 @@
       storageBucket: "ae-bb-securite.appspot.com",
       messagingSenderId: "1055477094114"
     };
-
     firebase.initializeApp(config);
   </script>
 
@@ -107,64 +97,64 @@
   </div>
   <!-- -->
 
-    <!--Modal basket-->
-    <div class="modal" id="basket-modal" tabindex="-1" role="dialog">
-        <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title">Your basket list here</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-            
-              <article class ="ArticleTitre">
+  <!--Modal basket-->
+  <div class="modal" id="basket-modal" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Your basket list here</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+          
+            <article class ="ArticleTitre">
+              <div class = "row">
+                  <div class="col-sm-3 text-center">Article name</div>
+                  <div class="col-sm-3 text-center">Quantity</div>  
+                  <div class="col-sm-3 text-center">Add</div>
+                  <div class="col-sm-3 text-center">Delete</div>
+              </div>
+            </article>
+
+            <article class ="ArticleArticle">
                 <div class = "row">
-                    <div class="col-sm-3 text-center">Article name</div>
-                    <div class="col-sm-3 text-center">Quantity</div>  
-                    <div class="col-sm-3 text-center">Add</div>
-                    <div class="col-sm-3 text-center">Delete</div>
+                    <div class="col-sm-3">Test Article name</div>
+                    <div class="col-sm-3">Quantity</div>  
+                    <div class="col-sm-3 text-center"><img src="img/ModalBasket/Add.png" alt="Basket" width="10%" height="10%" /></div>
+                    <div class="col-sm-3 text-center"><img src="img/ModalBasket/Delete.jpg" alt="Basket" width="10%" height="10%" /></div>
                 </div>
-              </article>
+            </article>
 
-              <article class ="ArticleArticle">
-                  <div class = "row">
-                      <div class="col-sm-3">Test Article name</div>
-                      <div class="col-sm-3">Quantity</div>  
-                      <div class="col-sm-3 text-center"><img src="img/ModalBasket/Add.png" alt="Basket" width="10%" height="10%" /></div>
-                      <div class="col-sm-3 text-center"><img src="img/ModalBasket/Delete.jpg" alt="Basket" width="10%" height="10%" /></div>
-                  </div>
-              </article>
+            <article class ="ArticleArticle">
+                <div class = "row">
+                    <div class="col-sm-3">Test Article name</div>
+                    <div class="col-sm-3">Quantity</div>  
+                    <div class="col-sm-3 text-center"><img src="img/ModalBasket/Add.png" alt="Basket" width="10%" height="10%" /></div>
+                    <div class="col-sm-3 text-center"><img src="img/ModalBasket/Delete.jpg" alt="Basket" width="10%" height="10%" /></div>
+                </div>
+            </article>
 
-              <article class ="ArticleArticle">
-                  <div class = "row">
-                      <div class="col-sm-3">Test Article name</div>
-                      <div class="col-sm-3">Quantity</div>  
-                      <div class="col-sm-3 text-center"><img src="img/ModalBasket/Add.png" alt="Basket" width="10%" height="10%" /></div>
-                      <div class="col-sm-3 text-center"><img src="img/ModalBasket/Delete.jpg" alt="Basket" width="10%" height="10%" /></div>
-                  </div>
-              </article>
+            <article class ="ArticleArticle">
+                <div class = "row">
+                    <div class="col-sm-3">Test Article name</div>
+                    <div class="col-sm-3">Quantity</div>  
+                    <div class="col-sm-3 text-center"><img src="img/ModalBasket/Add.png" alt="Basket" width="10%" height="10%" /></div>
+                    <div class="col-sm-3 text-center"><img src="img/ModalBasket/Delete.jpg" alt="Basket" width="10%" height="10%" /></div>
+                </div>
+            </article>
 
-              <article class ="ArticleArticle">
-                  <div class = "row">
-                      <div class="col-sm-3">Test Article name</div>
-                      <div class="col-sm-3">Quantity</div>  
-                      <div class="col-sm-3 text-center"><img src="img/ModalBasket/Add.png" alt="Basket" width="10%" height="10%" /></div>
-                      <div class="col-sm-3 text-center"><img src="img/ModalBasket/Delete.jpg" alt="Basket" width="10%" height="10%" /></div>
-                  </div>
-              </article>
-  
 
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-primary">Pa</button>
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" href="paiement.html" class="btn btn-primary" >Pay</button>
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
           </div>
         </div>
       </div>
-      <!---->
+</div>
+<!---->
 
 
 <body>
@@ -181,11 +171,9 @@
           <p class="mt2"><button type="button" class="btn btn-cta btn-lg" data-toggle="modal" data-target="#login-modal">LOG IN </button></p>
         </div>
       </div>
-      <!-- /row -->
     </div>
-    <!-- /container -->
   </div>
-  <!-- /headerwrap -->
+
 
   <!-- ##### Description #####  -->
   <div id="black">
@@ -195,9 +183,8 @@
           <h3>Our Story</h3>
           <hr>
         </div>
-        <!-- /col-lg-4 -->
       </div>
-      <!-- /row -->
+
 
       <div class="row mt">
         <div class="col-lg-8 col-lg-offset-2">
@@ -206,11 +193,8 @@
           <p style="text-align: center">Axel & Bastian</p>
         </div>
       </div>
-      <!-- /row -->
     </div>
-    <!-- /container -->
   </div>
-  <!-- /black -->
 
   <!-- ##### Vinyl #####  -->
   <div class="container">
@@ -221,7 +205,6 @@
         <hr>
       </div>
     </div>
-    <!-- /row -->
 
     <div class="row mt">
       <div class="col-lg-4 col-md-4 col-xs-12 desc">
@@ -233,12 +216,12 @@
         </a>
         <p>RadioHead</p>
         <p class="lead">Best songs of the famous group : RadioHead. A compilation of 25 titles.</p>
-        <!-- Start Button [1] -->
+        <!-- Start Button -->
         <div class="button-hover">
           <a class="link" href="#">185 $</a>
           <a href="#">Add to basket</a>
         </div>
-        <!-- End Button [1] -->
+        <!-- End Button -->
       </div>
       <!-- col-lg-4 -->
 
@@ -251,14 +234,13 @@
         </a>
         <p>BHIBS</p>
         <p class="lead">A group unknow, but with a great potential in the future. Listen those 13 titles.</p>
-        <!-- Start Button [1] -->
+        <!-- Start Button -->
         <div class="button-hover">
           <a class="link" href="#">35 $</a>
           <a href="#">Add to basket</a>
         </div>
-        <!-- End Button [1] -->
+        <!-- End Button -->
       </div>
-      <!-- col-lg-4 -->
       <!DOCTYPE html>
       <html lang="en">
 
@@ -272,14 +254,13 @@
           </a>
           <p>The Beattles</p>
           <p class="lead">The greatest english group in the world propose you to listen those 16 titles.</p>
-          <!-- Start Button [1] -->
+          <!-- Start Button -->
           <div class="button-hover">
             <a class="link" href="#">630 $</a>
             <a href="#">Add to basket</a>
           </div>
-          <!-- End Button [1] -->
+          <!-- End Button -->
         </div>
-        <!-- col-lg-4 -->
 
         <div class="col-lg-4 col-md-4 col-xs-12 desc">
           <a class="b-link-fade b-animate-go" href="#"><img width="350" src="img/portfolio/port07.jpg" alt="" />
@@ -290,14 +271,14 @@
           </a>
           <p>The Doors</p>
           <p class="lead">This famous American group diplay to you this 15 titles from Los Angeles.</p>
-          <!-- Start Button [1] -->
+          <!-- Start Button -->
           <div class="button-hover">
             <a class="link" href="#">158 $</a>
             <a href="#">Add to basket</a>
           </div>
-          <!-- End Button [1] -->
+          <!-- End Button -->
         </div>
-        <!-- col-lg-4 -->
+
 
         <div class="col-lg-4 col-md-4 col-xs-12 desc">
           <a class="b-link-fade b-animate-go" href="#"><img width="350" src="img/portfolio/port08.jpg" alt="" />
@@ -308,14 +289,14 @@
           </a>
           <p>The stones</p>
           <p class="lead">An other well-know group that offer to you those 20 titles of hapiness.</p>
-          <!-- Start Button [1] -->
+          <!-- Start Button -->
           <div class="button-hover">
             <a class="link" href="#">58 $</a>
             <a href="#">Add to basket</a>
           </div>
-          <!-- End Button [1] -->
+          <!-- End Button -->
         </div>
-        <!-- col-lg-4 -->
+
 
         <div class="col-lg-4 col-md-4 col-xs-12 desc">
           <a class="b-link-fade b-animate-go" href="#"><img width="350" src="img/portfolio/port09.jpg" alt="" />
@@ -326,19 +307,19 @@
           </a>
           <p>Sleep</p>
           <p class="lead">This is the perfect compilation to fall asleep after a hard working day.</p>
-          <!-- Start Button [1] -->
+          <!-- Start Button -->
           <div class="button-hover">
             <a class="link" href="#">258 $</a>
             <a href="#">Add to basket</a>
           </div>
-          <!-- End Button [1] -->
+          <!-- End Button -->
         </div>
-        <!-- col-lg-4 -->
+
 
     </div>
-    <!-- /row -->
+
   </div>
-  <!-- /container -->
+
 
   <!-- ##### Platines #####  -->
   <div id="cta01">
@@ -373,14 +354,14 @@
         </a>
         <p>PRT 200rs</p>
         <p class="lead">Perfect for bigginer in listening analog</p>
-        <!-- Start Button [1] -->
+        <!-- Start Button -->
         <div class="button-hover">
             <a class="link" href="#">1235 $</a>
             <a href="#">Add to basket</a>
         </div>
-        <!-- End Button [1] -->
+        <!-- End Button -->
       </div>
-      <!-- col-lg-4 -->
+      
       <div class="col-lg-4 col-md-4 col-xs-12 desc">
         <a class="b-link-fade b-animate-go" href="#"><img width="350" src="img/portfolio/port02.jpg" alt="" />
           <div class="b-wrapper">
@@ -390,14 +371,14 @@
         </a>
         <p>SDF 563tr</p>
         <p class="lead">Medium class record player. Perfect for a low budget.</p>
-        <!-- Start Button [1] -->
+        <!-- Start Button -->
         <div class="button-hover">
           <a class="link" href="#">235 $</a>
           <a href="#">Add to basket</a>
         </div>
-        <!-- End Button [1] -->
+        <!-- End Button -->
       </div>
-      <!-- col-lg-4 -->
+
       <div class="col-lg-4 col-md-4 col-xs-12 desc">
         <a class="b-link-fade b-animate-go" href="#"><img width="350" src="img/portfolio/port03.jpg" alt="" />
           <div class="b-wrapper">
@@ -407,14 +388,14 @@
         </a>
         <p>RPZ Milenium</p>
         <p class="lead">A great design and perfect for the vocal prestations</p>
-        <!-- Start Button [1] -->
+        <!-- Start Button -->
         <div class="button-hover">
           <a class="link" href="#">412 $</a>
           <a href="#">Add to basket</a>
         </div>
-        <!-- End Button [1] -->
+        <!-- End Button -->
       </div>
-      <!-- col-lg-4 -->
+   
       <div class="col-lg-4 col-md-4 col-xs-12 desc">
         <a class="b-link-fade b-animate-go" href="#"><img width="350" src="img/portfolio/port10.jpg" alt="" />
           <div class="b-wrapper">
@@ -424,14 +405,14 @@
         </a>
         <p>BGT 2300</p>
         <p class="lead">Equiped with bluetooth communication for a better disponibility</p>
-        <!-- Start Button [1] -->
+        <!-- Start Button -->
         <div class="button-hover">
           <a class="link" href="#">3245 $</a>
           <a href="#">Add to basket</a>
         </div>
-        <!-- End Button [1] -->
+        <!-- End Button -->
       </div>
-      <!-- col-lg-4 -->
+
       <div class="col-lg-4 col-md-4 col-xs-12 desc">
         <a class="b-link-fade b-animate-go" href="#"><img width="350" src="img/portfolio/port11.jpg" alt="" />
           <div class="b-wrapper">
@@ -441,14 +422,14 @@
         </a>
         <p>CB 45t</p>
         <p class="lead">Display the greatest song of our store</p>
-        <!-- Start Button [1] -->
+        <!-- Start Button -->
         <div class="button-hover">
           <a class="link" href="#">5235 $</a>
           <a href="#">Add to basket</a>
         </div>
-        <!-- End Button [1] -->
+        <!-- End Button -->
       </div>
-      <!-- col-lg-4 -->
+
       <div class="col-lg-4 col-md-4 col-xs-12 desc">
         <a class="b-link-fade b-animate-go" href="#"><img width="350" src="img/portfolio/port12.jpg" alt="" />
           <div class="b-wrapper">
@@ -458,17 +439,17 @@
         </a>
         <p>OCB FC</p>
         <p class="lead">Simple design and perfect shape.</p>
-        <!-- Start Button [1] -->
+        <!-- Start Button -->
         <div class="button-hover">
           <a class="link" href="#">135 $</a>
           <a href="#">Add to basket</a>
         </div>
-        <!-- End Button [1] -->
+        <!-- End Button -->
       </div>
-      <!-- col-lg-4 -->
+      
     </div>
   </div>
-  <!-- /container -->
+
 
   <!-- ###### Commentaire #####-->
   <div id="white">
@@ -520,7 +501,7 @@
       </div>
     </div>
   </div>
-  <!-- /white -->
+
 
   <div id="copyrights">
     <div class="container">
@@ -529,7 +510,7 @@
       </p>
     </div>
   </div>
-  <!-- / copyrights -->
+ 
 
   <!-- JavaScript Libraries -->
   <script src="lib/jquery/jquery.min.js"></script>
