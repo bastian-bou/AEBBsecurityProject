@@ -54,6 +54,7 @@
 
   <script src="https://www.gstatic.com/firebasejs/5.7.0/firebase.js"></script>
   <script>
+
     // Initialize Firebase
     var config = {
       apiKey: "AIzaSyDXUMBNPBoIOTdcRTBdjjS5ttYW3zb_i7U",
@@ -63,6 +64,7 @@
       storageBucket: "ae-bb-securite.appspot.com",
       messagingSenderId: "1055477094114"
     };
+
     firebase.initializeApp(config);
   </script>
 
@@ -105,10 +107,70 @@
   </div>
   <!-- -->
 
+    <!--Modal basket-->
+    <div class="modal" id="basket-modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Your basket list here</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+            
+              <article class ="ArticleTitre">
+                <div class = "row">
+                    <div class="col-sm-3 text-center">Article name</div>
+                    <div class="col-sm-3 text-center">Quantity</div>  
+                    <div class="col-sm-3 text-center">Add</div>
+                    <div class="col-sm-3 text-center">Delete</div>
+                </div>
+              </article>
+
+              <article class ="ArticleArticle">
+                  <div class = "row">
+                      <div class="col-sm-3">Test Article name</div>
+                      <div class="col-sm-3">Quantity</div>  
+                      <div class="col-sm-3 text-center"><img src="img/ModalBasket/Add.png" alt="Basket" width="10%" height="10%" /></div>
+                      <div class="col-sm-3 text-center"><img src="img/ModalBasket/Delete.jpg" alt="Basket" width="10%" height="10%" /></div>
+                  </div>
+              </article>
+
+              <article class ="ArticleArticle">
+                  <div class = "row">
+                      <div class="col-sm-3">Test Article name</div>
+                      <div class="col-sm-3">Quantity</div>  
+                      <div class="col-sm-3 text-center"><img src="img/ModalBasket/Add.png" alt="Basket" width="10%" height="10%" /></div>
+                      <div class="col-sm-3 text-center"><img src="img/ModalBasket/Delete.jpg" alt="Basket" width="10%" height="10%" /></div>
+                  </div>
+              </article>
+
+              <article class ="ArticleArticle">
+                  <div class = "row">
+                      <div class="col-sm-3">Test Article name</div>
+                      <div class="col-sm-3">Quantity</div>  
+                      <div class="col-sm-3 text-center"><img src="img/ModalBasket/Add.png" alt="Basket" width="10%" height="10%" /></div>
+                      <div class="col-sm-3 text-center"><img src="img/ModalBasket/Delete.jpg" alt="Basket" width="10%" height="10%" /></div>
+                  </div>
+              </article>
+  
+
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary">Pa</button>
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!---->
+
+
 <body>
 
   <!-- ##### Header #####  -->
-  <div><a class="basket" href="paiement.html"><img src="img/portfolio/cart.svg" alt="Basket" width="10%" height="10%" /></a></div>
+  <div><a class="basket" data-toggle="modal" data-target="#basket-modal"><img src="img/portfolio/cart.svg" alt="Basket" width="10%" height="10%" /></a></div>
 
   <div id="headerwrap">
     <div class="container">
@@ -169,7 +231,7 @@
             <p class="b-from-right b-animate b-delay03">1986</p>
           </div>
         </a>
-        <p>RadioHead best of</p>
+        <p>RadioHead</p>
         <p class="lead">Best songs of the famous group : RadioHead. A compilation of 25 titles.</p>
         <!-- Start Button [1] -->
         <div class="button-hover">
@@ -187,7 +249,7 @@
             <p class="b-from-right b-animate b-delay03">1975</p>
           </div>
         </a>
-        <p>Black heart in black suit</p>
+        <p>BHIBS</p>
         <p class="lead">A group unknow, but with a great potential in the future. Listen those 13 titles.</p>
         <!-- Start Button [1] -->
         <div class="button-hover">
@@ -244,7 +306,7 @@
               <p class="b-from-right b-animate b-delay03">2002</p>
             </div>
           </a>
-          <p>The rolling stones</p>
+          <p>The stones</p>
           <p class="lead">An other well-know group that offer to you those 20 titles of hapiness.</p>
           <!-- Start Button [1] -->
           <div class="button-hover">
@@ -258,8 +320,8 @@
         <div class="col-lg-4 col-md-4 col-xs-12 desc">
           <a class="b-link-fade b-animate-go" href="#"><img width="350" src="img/portfolio/port09.jpg" alt="" />
             <div class="b-wrapper">
-              <h4 class="b-from-left b-animate b-delay03">Post 3</h4>
-              <p class="b-from-right b-animate b-delay03">Read More.</p>
+              <h4 class="b-from-left b-animate b-delay03">In</h4>
+              <p class="b-from-right b-animate b-delay03">1995.</p>
             </div>
           </a>
           <p>Sleep</p>
@@ -305,8 +367,8 @@
       <div class="col-lg-4 col-md-4 col-xs-12 desc">
         <a class="b-link-fade b-animate-go" href="#"><img width="350" src="img/portfolio/port01.jpg" alt="" />
           <div class="b-wrapper">
-            <h4 class="b-from-left b-animate b-delay03">Post 2</h4>
-            <p class="b-from-right b-animate b-delay03">Read More.</p>
+            <h4 class="b-from-left b-animate b-delay03">35 tr</h4>
+            <p class="b-from-right b-animate b-delay03">45 tr</p>
           </div>
         </a>
         <p>PRT 200rs</p>
@@ -322,8 +384,8 @@
       <div class="col-lg-4 col-md-4 col-xs-12 desc">
         <a class="b-link-fade b-animate-go" href="#"><img width="350" src="img/portfolio/port02.jpg" alt="" />
           <div class="b-wrapper">
-            <h4 class="b-from-left b-animate b-delay03">Post 2</h4>
-            <p class="b-from-right b-animate b-delay03">Read More.</p>
+            <h4 class="b-from-left b-animate b-delay03">35 tr</h4>
+            <p class="b-from-right b-animate b-delay03">45 tr</p>
           </div>
         </a>
         <p>SDF 563tr</p>
@@ -339,16 +401,15 @@
       <div class="col-lg-4 col-md-4 col-xs-12 desc">
         <a class="b-link-fade b-animate-go" href="#"><img width="350" src="img/portfolio/port03.jpg" alt="" />
           <div class="b-wrapper">
-            <h4 class="b-from-left b-animate b-delay03">Post 2</h4>
-            <p class="b-from-right b-animate b-delay03">Read More.</p>
+            <h4 class="b-from-left b-animate b-delay03">35 tr</h4>
+            <p class="b-from-right b-animate b-delay03">45 tr</p>
           </div>
         </a>
-        <p>Another Cool Stuff</p>
-        <p class="lead">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
-          printer took a galley of type and scrambled it to make a type specimen book.</p>
+        <p>RPZ Milenium</p>
+        <p class="lead">A great design and perfect for the vocal prestations</p>
         <!-- Start Button [1] -->
         <div class="button-hover">
-          <a class="link" href="#">235 $</a>
+          <a class="link" href="#">412 $</a>
           <a href="#">Add to basket</a>
         </div>
         <!-- End Button [1] -->
@@ -357,16 +418,15 @@
       <div class="col-lg-4 col-md-4 col-xs-12 desc">
         <a class="b-link-fade b-animate-go" href="#"><img width="350" src="img/portfolio/port10.jpg" alt="" />
           <div class="b-wrapper">
-            <h4 class="b-from-left b-animate b-delay03">Post 2</h4>
-            <p class="b-from-right b-animate b-delay03">Read More.</p>
+            <h4 class="b-from-left b-animate b-delay03">35 tr</h4>
+            <p class="b-from-right b-animate b-delay03">Only</p>
           </div>
         </a>
-        <p>Another Cool Stuff</p>
-        <p class="lead">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
-          printer took a galley of type and scrambled it to make a type specimen book.</p>
+        <p>BGT 2300</p>
+        <p class="lead">Equiped with bluetooth communication for a better disponibility</p>
         <!-- Start Button [1] -->
         <div class="button-hover">
-          <a class="link" href="#">235 $</a>
+          <a class="link" href="#">3245 $</a>
           <a href="#">Add to basket</a>
         </div>
         <!-- End Button [1] -->
@@ -375,16 +435,15 @@
       <div class="col-lg-4 col-md-4 col-xs-12 desc">
         <a class="b-link-fade b-animate-go" href="#"><img width="350" src="img/portfolio/port11.jpg" alt="" />
           <div class="b-wrapper">
-            <h4 class="b-from-left b-animate b-delay03">Post 2</h4>
-            <p class="b-from-right b-animate b-delay03">Read More.</p>
+            <h4 class="b-from-left b-animate b-delay03">35 tr</h4>
+            <p class="b-from-right b-animate b-delay03">45 tr</p>
           </div>
         </a>
-        <p>Another Cool Stuff</p>
-        <p class="lead">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
-          printer took a galley of type and scrambled it to make a type specimen book.</p>
+        <p>CB 45t</p>
+        <p class="lead">Display the greatest song of our store</p>
         <!-- Start Button [1] -->
         <div class="button-hover">
-          <a class="link" href="#">235 $</a>
+          <a class="link" href="#">5235 $</a>
           <a href="#">Add to basket</a>
         </div>
         <!-- End Button [1] -->
@@ -393,16 +452,15 @@
       <div class="col-lg-4 col-md-4 col-xs-12 desc">
         <a class="b-link-fade b-animate-go" href="#"><img width="350" src="img/portfolio/port12.jpg" alt="" />
           <div class="b-wrapper">
-            <h4 class="b-from-left b-animate b-delay03">Post 2</h4>
-            <p class="b-from-right b-animate b-delay03">Read More.</p>
+            <h4 class="b-from-left b-animate b-delay03">45 tr</h4>
+            <p class="b-from-right b-animate b-delay03">Only</p>
           </div>
         </a>
-        <p>Another Cool Stuff</p>
-        <p class="lead">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
-          printer took a galley of type and scrambled it to make a type specimen book.</p>
+        <p>OCB FC</p>
+        <p class="lead">Simple design and perfect shape.</p>
         <!-- Start Button [1] -->
         <div class="button-hover">
-          <a class="link" href="#">235 $</a>
+          <a class="link" href="#">135 $</a>
           <a href="#">Add to basket</a>
         </div>
         <!-- End Button [1] -->
