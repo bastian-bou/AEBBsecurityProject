@@ -27,8 +27,8 @@ function toggleSignIn() {
       // [END signout]
     } else {
 
-      var email = document.getElementById("signIn_email").value;
-      var password = document.getElementById("signIn_pass").value;
+      var email = document.getElementById('email_login').value;
+      var password = document.getElementById('pass_login').value;
 
       if (email.length < 4) {
         alert('Please enter an email address.');
@@ -63,8 +63,9 @@ function toggleSignIn() {
    * Handles the sign up button press.
    */
   function handleSignUp() {
-    var email = document.getElementById('email').value;
-    var password = document.getElementById('password').value;
+    var email = document.getElementById('signIn_email').value;
+    var password = document.getElementById('signIn_pass').value;
+    console.log("Email : " + email + " Password : " + password);
     if (email.length < 4) {
       alert('Please enter an email address.');
       return;
@@ -174,7 +175,7 @@ function toggleSignIn() {
         });
         // [END authstatelistener]jk
 
-        document.getElementById('auth_signin').addEventListener('click', toggleSignIn, false);
+        //document.getElementById('auth_signin').addEventListener('click', toggleSignIn, false);
         // document.getElementById('quickstart-sign-up').addEventListener('click', handleSignUp, false);
         // document.getElementById('quickstart-verify-email').addEventListener('click', sendEmailVerification, false);
         // document.getElementById('quickstart-password-reset').addEventListener('click', sendPasswordReset, false);

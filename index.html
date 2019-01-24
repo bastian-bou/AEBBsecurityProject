@@ -45,14 +45,14 @@
     ========================================================== -->
 
   <!-- Firebase App is always required and must be first -->
-  <script src="https://www.gstatic.com/firebasejs/5.7.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.8.0/firebase-app.js"></script>
 
   <!-- Add additional services that you want to use -->
-  <script src="https://www.gstatic.com/firebasejs/5.7.0/firebase-auth.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/5.7.0/firebase-database.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.8.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.8.0/firebase-database.js"></script>
 
 
-  <script src="https://www.gstatic.com/firebasejs/5.7.0/firebase.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.8.0/firebase.js"></script>
   <script>
     // Initialize Firebase
     var config = {
@@ -81,7 +81,7 @@
           <input type="text" name="pass" placeholder="Zip code" id="signIn_zip"> 
           <input type="text" name="pass" placeholder="City" id="signIn_city"> 
           <input type="text" name="pass" placeholder="Country" id="signIn_country"> 
-          <input type="submit" name="login" class="login loginmodal-submit" value="Finish" id="auth_signin">
+          <input type="submit" name="login" class="login loginmodal-submit" value="Finish" id="auth_signin" onclick="handleSignUp();">
         </form>
       </div>
     </div>
@@ -92,8 +92,8 @@
       <div class="loginmodal-container">
         <h1>Login to Your Account</h1><br>
         <form>
-          <input type="text" name="user" placeholder="Username">
-          <input type="password" name="pass" placeholder="Password">
+          <input type="text" name="email" placeholder="Email", id="email_login">
+          <input type="password" name="pass" placeholder="Password" id="pass_login">
           <input type="submit" name="login" class="login loginmodal-submit" value="Login">
         </form>
 
