@@ -50,28 +50,35 @@ function toggleSignIn() {
         } else {
           alert(errorMessage);
         }
-        console.log(error);
-        document.getElementById('auth_signin').disabled = false;
+        console.log(errorCode + " : " + errorMessage);
+        //document.getElementById('auth_signin').disabled = false;
         // [END_EXCLUDE]
       });
       // [END authwithemail]
     }
-    document.getElementById('auth_signin').disabled = true;
+    //document.getElementById('auth_signin').disabled = true;
   }
 
   /**
    * Handles the sign up button press.
    */
   function handleSignUp() {
-    var email = document.getElementById('signIn_email').value;
-    var password = document.getElementById('signIn_pass').value;
-    console.log("Email : " + email + " Password : " + password);
+    var email = $('#signUp_email').val();
+    var password = $('#signUp_pass').val();
+    var username = $('#signUp_name').val();
+    var add = $('#signUp_add').val();
+    var zip = $('#signUp_zip').val();
+    var city = $('#signUp_city').val();
+    var country = $('#signUp_country').val();
+
     if (email.length < 4) {
       alert('Please enter an email address.');
+      console.log("email");
       return;
     }
     if (password.length < 4) {
       alert('Please enter a password.');
+      console.log("password");
       return;
     }
     // Sign in with email and pass.
@@ -86,10 +93,19 @@ function toggleSignIn() {
       } else {
         alert(errorMessage);
       }
-      console.log(error);
       // [END_EXCLUDE]
     });
+    console.log(auth.currentUser.uid);
+    db.ref('Clients/' + auth.currentUser.uid).set({
+      name: username,
+      address: add,
+      zip: zip,
+      city: city,
+      country: country
+    });
+
     // [END createwithemail]
+    $('#sign-in').modal('toggle');
   }
 
   /**
@@ -158,7 +174,7 @@ function toggleSignIn() {
             //document.getElementById('auth_signin').textContent = 'Sign out';
             // document.getElementById('quickstart-account-details').textContent = JSON.stringify(user, null, '  ');
             if (!emailVerified) {
-                document.getElementById('quickstart-verify-email').disabled = false;
+                //document.getElementById('quickstart-verify-email').disabled = false;
             }
             // [END_EXCLUDE]
             } else {
