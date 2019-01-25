@@ -11,13 +11,22 @@ var db = firebase.database();
 var auth = firebase.auth();
 
 function addItemIntoBasket(name, price) {
-    db.ref('Clients/' + name).set({
+  if (!auth.currentUser) {
+    alert('please login before adding an item to your shopping cart');
+    return;
+  } else {
+    db.ref('Clients/' + remChara(auth.currentUser.email) + "/Basket/" + name).set({
         price: price
     });
+  }
 }
 
 function totalPrice() {
 
+}
+
+function remChara(string) {
+  return string.replace(/[^a-zA-Z ]/g, "");
 }
 
 function toggleSignIn() {
@@ -27,8 +36,8 @@ function toggleSignIn() {
       // [END signout]
     } else {
 
-      var email = document.getElementById('email_login').value;
-      var password = document.getElementById('pass_login').value;
+      var email = $('#email_login').val();
+      var password = $('#pass_login').val();
 
       if (email.length < 4) {
         alert('Please enter an email address.');
@@ -57,6 +66,7 @@ function toggleSignIn() {
       // [END authwithemail]
     }
     //document.getElementById('auth_signin').disabled = true;
+    $('#login-modal').modal('toggle');
   }
 
   /**
@@ -73,12 +83,10 @@ function toggleSignIn() {
 
     if (email.length < 4) {
       alert('Please enter an email address.');
-      console.log("email");
       return;
     }
     if (password.length < 4) {
       alert('Please enter a password.');
-      console.log("password");
       return;
     }
     // Sign in with email and pass.
@@ -95,8 +103,8 @@ function toggleSignIn() {
       }
       // [END_EXCLUDE]
     });
-    console.log(auth.currentUser.uid);
-    db.ref('Clients/' + auth.currentUser.uid).set({
+    auth.signInWithEmailAndPassword(email, password).catch(function(error) {});
+    db.ref('Clients/' + remChara(email)).set({
       name: username,
       address: add,
       zip: zip,
@@ -123,12 +131,13 @@ function toggleSignIn() {
   }
 
   function sendPasswordReset() {
-    var email = document.getElementById('email').value;
+    var email = $('#email_login').val();
     // [START sendpasswordemail]
     auth.sendPasswordResetEmail(email).then(function() {
       // Password Reset Email Sent!
       // [START_EXCLUDE]
       alert('Password Reset Email Sent!');
+      $('#login-modal').modal('toggle');
       // [END_EXCLUDE]
     }).catch(function(error) {
       // Handle Errors here.
