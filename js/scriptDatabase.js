@@ -31,8 +31,12 @@ function remChara(string) {
 
 function toggleSignIn() {
     if (auth.currentUser) {
+      db.ref('Clients/' + remChara(auth.currentUser.email)).once('value').then(function(snapshot){
+        alert('Bye ' + snapshot.val().name + '! See you soon :)');
+        auth.signOut();
+      });
       // [START signout]
-      auth.signOut();
+      return;
       // [END signout]
     } else {
 
@@ -198,6 +202,10 @@ function toggleSignIn() {
             // document.getElementById('auth_signin').disabled = false;
             // [END_EXCLUDE]
         });
+
+        if(!auth.currentUser){
+          $(this).prop("disabled",true);
+        }
         // [END authstatelistener]jk
 
         //document.getElementById('auth_signin').addEventListener('click', toggleSignIn, false);
