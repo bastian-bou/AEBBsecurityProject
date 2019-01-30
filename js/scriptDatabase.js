@@ -6,11 +6,16 @@
  */
 
 
-//database reference
-var db = firebase.database();
-var auth = firebase.auth();
+//firebase references
+var db = firebase.database(); //realtime database on firebase
+var auth = firebase.auth();   //authentication on firebase
 
-
+/**
+ * Function to add item in database
+ * @param {String} id - id of the item for the database
+ * @param {int} price - price of this item
+ * @param {String} name - name of the vinyle or the record player
+ */
 function addItemIntoBasket(id, price, name) {
   if (!auth.currentUser) {
     alert('please login before adding an item to your shopping cart');
@@ -33,22 +38,28 @@ function addItemIntoBasket(id, price, name) {
 function totalPrice() {
 
 }
-
+/**
+ * Reduce email, remove [@,.,1, 2, 3, ...]
+ * @param {String} string - email to reduce
+ */
 function remChara(string) {
   return string.replace(/[^a-zA-Z ]/g, "");
 }
 
+/**
+ * When you click on sign in, to connect or disconnect
+ */
 function toggleSignIn() {
     if (auth.currentUser) {
+      // [START signout]
       db.ref('Clients/' + remChara(auth.currentUser.email)).once('value').then(function(snapshot){
         alert('Bye ' + snapshot.val().name + '! See you soon :)');
         auth.signOut();
       });
-      // [START signout]
       return;
       // [END signout]
     } else {
-
+      //Test email and password
       var email = $('#email_login').val();
       var password = $('#pass_login').val();
 
@@ -76,6 +87,7 @@ function toggleSignIn() {
         
         // [END_EXCLUDE]
       });
+      //close the modal
       $('#login-modal').modal('toggle');
     }
   }
@@ -85,7 +97,7 @@ function toggleSignIn() {
    */
   function handleSignUp() {
     $('.signup-help').html('');
-
+    //get all the values
     var email = $('#signUp_email').val();
     var password = $('#signUp_pass').val();
     var username = $('#signUp_name').val();
@@ -93,7 +105,7 @@ function toggleSignIn() {
     var zip = $('#signUp_zip').val();
     var city = $('#signUp_city').val();
     var country = $('#signUp_country').val();
-
+    //Test all the values
     if(username == '') {
       $('.signup-help').html("<p>Add a user name please.</p>");
       return;
@@ -136,6 +148,7 @@ function toggleSignIn() {
       }
       // [END_EXCLUDE]
     });
+    //connect on the website with the new account
     auth.signInWithEmailAndPassword(email, password).catch(function(error) {});
     db.ref('Clients/' + remChara(email)).set({
       name: username,
@@ -162,7 +175,9 @@ function toggleSignIn() {
     });
     // [END sendemailverification]
   }
-
+  /**
+   * Send password reset email
+   */
   function sendPasswordReset() {
     var email = $('#email_login').val();
     // [START sendpasswordemail]
@@ -187,14 +202,20 @@ function toggleSignIn() {
     });
     // [END sendpasswordemail];
   }
-
+  /**
+   * Function to add 1 quantity of the item in param
+   * @param {String} id - id of the item
+   */
   function addQuantity(id) {
     db.ref('Clients/' + remChara(auth.currentUser.email)).once('value').then(function(snapshot){
       var quant = snapshot.child('Basket/' + id).val().quantity + 1;
       db.ref('Clients/' + remChara(auth.currentUser.email) + "/Basket/" + id).update({quantity: quant});
     });
   }
-
+  /**
+   * Function to remove 1 quantity of the item in param
+   * @param {String} id - id of the item
+   */
   function removeQuantity(id) {
     db.ref('Clients/' + remChara(auth.currentUser.email)).once('value').then(function(snapshot){
       var quantity = snapshot.child('Basket/' + id).val().quantity;
@@ -205,7 +226,10 @@ function toggleSignIn() {
       }
     });
   }
-
+  /**
+   * Function listener on modification in basket
+   * @param {Object} starCountRef - User branch in database
+   */
   function eventBasket(starCountRef) {
     starCountRef.on('value', function(snapshot) {
       if(snapshot.child("Basket").exists()) {
@@ -218,6 +242,7 @@ function toggleSignIn() {
               <div class="col-sm-3 text-center">Delete</div>
           </div>
         </article>`);
+        //for each item in the basket
         snapshot.child("Basket").forEach(function(childSnapshot) {
           $('.modal-body').append(`
             <article class ="ArticleArticle">
@@ -249,7 +274,7 @@ function toggleSignIn() {
           // User is signed in.
 
           $('#logoutButton').prop("disabled",false);
-
+          //event listener on basket
           eventBasket(db.ref('Clients/' + remChara(user.email)));
         
           /*if (!emailVerified) {
@@ -271,7 +296,6 @@ function toggleSignIn() {
             </article>`);
       
         }
-      
     });
   }
 
