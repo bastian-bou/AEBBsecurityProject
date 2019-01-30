@@ -10,13 +10,22 @@
 var db = firebase.database();
 var auth = firebase.auth();
 
-function addItemIntoBasket(name, price) {
+
+function addItemIntoBasket(id, price, name) {
   if (!auth.currentUser) {
     alert('please login before adding an item to your shopping cart');
     return;
   } else {
-    db.ref('Clients/' + remChara(auth.currentUser.email) + "/Basket/" + name).set({
-        price: price
+    db.ref('Clients/' + remChara(auth.currentUser.email)).once('value').then(function(snapshot){
+      if(snapshot.child("Basket/" + id).exists()) {
+        db.ref('Clients/' + remChara(auth.currentUser.email) + "/Basket/" + id).update({quantity: snapshot.child("Basket/" + id).val().quantity + 1});
+      } else {
+        db.ref('Clients/' + remChara(auth.currentUser.email) + "/Basket/" + id).set({
+          price: price,
+          name: name,
+          quantity: 1
+        });
+      }
     });
   }
 }
@@ -64,13 +73,11 @@ function toggleSignIn() {
           alert(errorMessage);
         }
         console.log(errorCode + " : " + errorMessage);
-        //document.getElementById('auth_signin').disabled = false;
+        
         // [END_EXCLUDE]
       });
-      // [END authwithemail]
+      $('#login-modal').modal('toggle');
     }
-    //document.getElementById('auth_signin').disabled = true;
-    $('#login-modal').modal('toggle');
   }
 
   /**
@@ -159,6 +166,43 @@ function toggleSignIn() {
     // [END sendpasswordemail];
   }
 
+  function addQuantity(id) {
+    db.ref('Clients/' + remChara(auth.currentUser.email)).once('value').then(function(snapshot){
+      db.ref('Clients/' + remChara(auth.currentUser.email) + "/Basket/" + id).update({quantity: snapshot.child('/Basket' + id).val().quantity + 1});
+    });
+  }
+
+  function removeQuantity(id) {
+
+  }
+
+  function eventBasket(starCountRef) {
+    starCountRef.on('value', function(snapshot) {
+      if(snapshot.child("Basket").exists()) {
+        $('.modal-body').html(`
+        <article class ="ArticleTitre">
+          <div class = "row">
+              <div class="col-sm-3 text-center">Article name</div>
+              <div class="col-sm-3 text-center">Quantity</div>  
+              <div class="col-sm-3 text-center">Add</div>
+              <div class="col-sm-3 text-center">Delete</div>
+          </div>
+        </article>`);
+        snapshot.child("Basket").forEach(function(childSnapshot) {
+          $('.modal-body').append(`
+            <article class ="ArticleArticle">
+              <div class = "row">
+                  <div class="col-sm-3">` + childSnapshot.val().name + `</div>
+                  <div class="col-sm-3">` + childSnapshot.val().quantity + `</div>  
+                  <div class="col-sm-3 text-center"><a href="" onclick="addQuantity('` + childSnapshot.key + `');"><img src="img/ModalBasket/Add.png" alt="Basket" width="10%" height="10%" /></div>
+                  <div class="col-sm-3 text-center"><a href="" onclick="removeQuantity('` + childSnapshot.key + `');"><img src="img/ModalBasket/Delete.jpg" alt="Basket" width="10%" height="10%" /></div>
+              </div>
+            </article>
+          `);
+        });
+      }
+    });
+  }
 
 
   /**
@@ -169,49 +213,37 @@ function toggleSignIn() {
     function initApp() {
         // Listening for auth state changes.
         // [START authstatelistener]
-        firebase.auth().onAuthStateChanged(function(user) {
-            // [START_EXCLUDE silent]
-            //document.getElementById('quickstart-verify-email').disabled = true;
-            // [END_EXCLUDE]
+        auth.onAuthStateChanged(function(user) {
+            
             if (user) {
-            // User is signed in.
-            var displayName = user.displayName;
-            var email = user.email;
-            var emailVerified = user.emailVerified;
-            var photoURL = user.photoURL;
-            var isAnonymous = user.isAnonymous;
-            var uid = user.uid;
-            var providerData = user.providerData;
-            // [START_EXCLUDE]
-            //document.getElementById('auth_signin-status').textContent = 'Signed in';
-            //document.getElementById('auth_signin').textContent = 'Sign out';
-            // document.getElementById('quickstart-account-details').textContent = JSON.stringify(user, null, '  ');
-            if (!emailVerified) {
-                //document.getElementById('quickstart-verify-email').disabled = false;
-            }
-            // [END_EXCLUDE]
+              // User is signed in.
+
+              $('#logoutButton').prop("disabled",false);
+
+              eventBasket(db.ref('Clients/' + remChara(user.email)));
+            
+              /*if (!emailVerified) {
+                  //document.getElementById('quickstart-verify-email').disabled = false;
+              }*/
+
             } else {
-            // User is signed out.
-            // [START_EXCLUDE]
-            // document.getElementById('auth_signin-status').textContent = 'Signed out';
-            // document.getElementById('auth_signin').textContent = 'Sign in';
-            // document.getElementById('quickstart-account-details').textContent = 'null';
-            // [END_EXCLUDE]
+              // User is signed out.
+              $('#logoutButton').prop("disabled",true);
+              //clear the basket 
+              $('.modal-body').html(`
+                <article class ="ArticleTitre">
+                  <div class = "row">
+                      <div class="col-sm-3 text-center">Article name</div>
+                      <div class="col-sm-3 text-center">Quantity</div>  
+                      <div class="col-sm-3 text-center">Add</div>
+                      <div class="col-sm-3 text-center">Delete</div>
+                  </div>
+                </article>`);
+         
             }
-            // [START_EXCLUDE silent]
-            // document.getElementById('auth_signin').disabled = false;
-            // [END_EXCLUDE]
+         
         });
 
-        if(!auth.currentUser){
-          $(this).prop("disabled",true);
-        }
-        // [END authstatelistener]jk
-
-        //document.getElementById('auth_signin').addEventListener('click', toggleSignIn, false);
-        // document.getElementById('quickstart-sign-up').addEventListener('click', handleSignUp, false);
-        // document.getElementById('quickstart-verify-email').addEventListener('click', sendEmailVerification, false);
-        // document.getElementById('quickstart-password-reset').addEventListener('click', sendPasswordReset, false);
     }
 
 
