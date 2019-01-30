@@ -168,12 +168,20 @@ function toggleSignIn() {
 
   function addQuantity(id) {
     db.ref('Clients/' + remChara(auth.currentUser.email)).once('value').then(function(snapshot){
-      db.ref('Clients/' + remChara(auth.currentUser.email) + "/Basket/" + id).update({quantity: snapshot.child('/Basket' + id).val().quantity + 1});
+      var quant = snapshot.child('Basket/' + id).val().quantity + 1;
+      db.ref('Clients/' + remChara(auth.currentUser.email) + "/Basket/" + id).update({quantity: quant});
     });
   }
 
   function removeQuantity(id) {
-
+    db.ref('Clients/' + remChara(auth.currentUser.email)).once('value').then(function(snapshot){
+      var quantity = snapshot.child('Basket/' + id).val().quantity;
+      if(quantity == 1) {
+        db.ref('Clients/' + remChara(auth.currentUser.email) + "/Basket/" + id).remove();
+      } else {
+        db.ref('Clients/' + remChara(auth.currentUser.email) + "/Basket/" + id).update({quantity: quantity - 1});
+      }
+    });
   }
 
   function eventBasket(starCountRef) {
@@ -206,46 +214,44 @@ function toggleSignIn() {
 
 
   /**
-     * initApp handles setting up UI event listeners and registering Firebase auth listeners:
-     *  - firebase.auth().onAuthStateChanged: This listener is called when the user is signed in or
-     *    out, and that is where we update the UI.
-     */
-    function initApp() {
-        // Listening for auth state changes.
-        // [START authstatelistener]
-        auth.onAuthStateChanged(function(user) {
-            
-            if (user) {
-              // User is signed in.
+   * initApp handles setting up UI event listeners and registering Firebase auth listeners:
+   *  - firebase.auth().onAuthStateChanged: This listener is called when the user is signed in or
+   *    out, and that is where we update the UI.
+  */
+  function initApp() {
+    // Listening for auth state changes.
+    // [START authstatelistener]
+    auth.onAuthStateChanged(function(user) {
+        
+        if (user) {
+          // User is signed in.
 
-              $('#logoutButton').prop("disabled",false);
+          $('#logoutButton').prop("disabled",false);
 
-              eventBasket(db.ref('Clients/' + remChara(user.email)));
-            
-              /*if (!emailVerified) {
-                  //document.getElementById('quickstart-verify-email').disabled = false;
-              }*/
+          eventBasket(db.ref('Clients/' + remChara(user.email)));
+        
+          /*if (!emailVerified) {
+              //document.getElementById('quickstart-verify-email').disabled = false;
+          }*/
 
-            } else {
-              // User is signed out.
-              $('#logoutButton').prop("disabled",true);
-              //clear the basket 
-              $('.modal-body').html(`
-                <article class ="ArticleTitre">
-                  <div class = "row">
-                      <div class="col-sm-3 text-center">Article name</div>
-                      <div class="col-sm-3 text-center">Quantity</div>  
-                      <div class="col-sm-3 text-center">Add</div>
-                      <div class="col-sm-3 text-center">Delete</div>
-                  </div>
-                </article>`);
-         
-            }
-         
-        });
-
-    }
-
+        } else {
+          // User is signed out.
+          $('#logoutButton').prop("disabled",true);
+          //clear the basket 
+          $('.modal-body').html(`
+            <article class ="ArticleTitre">
+              <div class = "row">
+                  <div class="col-sm-3 text-center">Article name</div>
+                  <div class="col-sm-3 text-center">Quantity</div>  
+                  <div class="col-sm-3 text-center">Add</div>
+                  <div class="col-sm-3 text-center">Delete</div>
+              </div>
+            </article>`);
+      
+        }
+      
+    });
+  }
 
   window.onload = function() {
     initApp();
