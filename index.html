@@ -64,16 +64,17 @@
     <div style="z-index: 20000000;" class="modal-dialog">
       <div class="loginmodal-container">
         <h1>Sign in to buy some stuff</h1><br>
-        <form>
+        <form id="form_signup">
           <input type="text" name="user" placeholder="Username" id="signUp_name">
-          <input type="text" name="user" placeholder="Mail address" id="signUp_email">
+          <input type="email" name="email" placeholder="Mail address" id="signUp_email">
           <input type="password" name="pass" placeholder="Password" id="signUp_pass"> 
-          <input type="text" name="pass" placeholder="Address" id="signUp_add"> 
-          <input type="text" name="pass" placeholder="Zip code" id="signUp_zip"> 
-          <input type="text" name="pass" placeholder="City" id="signUp_city"> 
-          <input type="text" name="pass" placeholder="Country" id="signUp_country"> 
+          <input type="text" name="add" placeholder="Address" id="signUp_add"> 
+          <input type="text" name="zip" placeholder="Zip code" id="signUp_zip"> 
+          <input type="text" name="city" placeholder="City" id="signUp_city"> 
+          <input type="text" name="country" placeholder="Country" id="signUp_country"> 
           <input type="button" name="login" class="login loginmodal-submit" value="Finish" id="auth_signUp" onclick="handleSignUp();">
         </form>
+        <div class="signup-help"></div>
       </div>
     </div>
   </div>
@@ -89,7 +90,7 @@
         </form>
 
         <div class="login-help">
-          <a id="register-link" href="#" data-toggle="modal" data-target="#sign-in" onclick="closeSignIn()">Register</a> - <a href="#" onclick="sendPasswordReset();">Forgot Password</a>
+          <a id="register-link" href="#" data-toggle="modal" data-target="#sign-in" onclick="closeSignIn();">Register</a> - <a href="#" onclick="sendPasswordReset();">Forgot Password</a>
         </div>
       </div>
     </div>
@@ -147,7 +148,7 @@
 
           </div>
           <div class="modal-footer">
-            <button type="button" href="paiement.html" class="btn btn-primary" >Pay</button>
+            <button type="button" onclick="window.location.href='paiement.html'" class="btn btn-primary" >Pay</button>
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
           </div>
         </div>

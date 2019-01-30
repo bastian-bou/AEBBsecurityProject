@@ -84,6 +84,8 @@ function toggleSignIn() {
    * Handles the sign up button press.
    */
   function handleSignUp() {
+    $('.signup-help').html('');
+
     var email = $('#signUp_email').val();
     var password = $('#signUp_pass').val();
     var username = $('#signUp_name').val();
@@ -92,12 +94,32 @@ function toggleSignIn() {
     var city = $('#signUp_city').val();
     var country = $('#signUp_country').val();
 
-    if (email.length < 4) {
-      alert('Please enter an email address.');
+    if(username == '') {
+      $('.signup-help').html("<p>Add a user name please.</p>");
+      return;
+    }
+    if (email.length < 4 || email.search("@") == -1) {
+      $('.signup-help').html("<p>Add a valid email please.</p>");
       return;
     }
     if (password.length < 4) {
-      alert('Please enter a password.');
+      $('.signup-help').html("<p>Add a valid password please.</p>");
+      return;
+    }
+    if(add == '') {
+      $('.signup-help').html("<p>Add a street please.</p>");
+      return;
+    }
+    if(zip == '' || zip.search(/[^a-zA-Z ]/g)) {
+      $('.signup-help').html("<p>Add a valid zip code please.</p>");
+      return;
+    }
+    if(city == '') {
+      $('.signup-help').html("<p>Add a city please.</p>");
+      return;
+    }
+    if(country == '') {
+      $('.signup-help').html("<p>Add a country please.</p>");
       return;
     }
     // Sign in with email and pass.
